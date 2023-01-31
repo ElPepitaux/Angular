@@ -1,0 +1,7 @@
+<p>composant works!</p>
+<app-product-display [products]="products"></app-product-display>
+<li *ngFor="let item of products; index as i; products">
+    <div *ngIf="item.stock != 0" (click)="item.stock = decrementStock(item.stock)">
+        {{item.name}}: {{item.price}}$. Stock restant: {{item.stock}}
+    </div>
+</li>
